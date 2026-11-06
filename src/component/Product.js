@@ -13,7 +13,7 @@ const Product = () => {
     const [showForm, setShowForm] = useState(false);
 
     const [productData, setProductData] = useState({
-        name: "",
+        Name: "",
         title: "",
         description: "",
         price: "",
@@ -29,7 +29,7 @@ const Product = () => {
         setShowForm(true);
         setError("");
         setProductData({
-            name: "",
+            Name: "",
             title: "",
             description: "",
             price: "",
@@ -46,7 +46,7 @@ const Product = () => {
         setShowForm(true);
         setError("");
         setProductData({
-            name: elm?.name ?? "",
+            Name: elm?.name ?? "",
             title: elm?.title ?? "",
             description: elm?.description ?? "",
             price: elm?.price ?? "",
@@ -105,7 +105,7 @@ const Product = () => {
         e.preventDefault();
         console.log("e ::::::::::", e);
         const formData = new FormData();
-        formData.append("name", productData.name);
+        formData.append("name", productData.Name);
         formData.append("title", productData.title);
         formData.append("description", productData.description);
         formData.append("price", productData.price);
@@ -270,9 +270,9 @@ const Product = () => {
                             <input
                                 className="border rounded-md p-1 w-full m-2"
                                 type="text"
-                                name="name"
+                                name="Name"
                                 placeholder="ProductName"
-                                value={productData?.name}
+                                value={productData?.Name}
                                 onChange={handleChange}
                             />
                             <input
